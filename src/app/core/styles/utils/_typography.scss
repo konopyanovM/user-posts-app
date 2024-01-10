@@ -1,0 +1,45 @@
+@use './mixins';
+
+//Typography
+@mixin headline-1 {
+  font-size: 128px;
+}
+
+@mixin headline-2 {
+  font-size: 80px;
+}
+
+@mixin headline-3 {
+  font-size: 64px;
+}
+
+@mixin headline-4 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+@mixin headline-5 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+@mixin headline-6 {
+  font-size: 24px;
+}
+
+@mixin subtitle-1 {
+  font-size: 24px;
+}
+
+@mixin subtitle-2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@mixin body-1 {
+  font-size: 16px;
+}
+
+@mixin caption {
+  font-size: 14px;
+}
