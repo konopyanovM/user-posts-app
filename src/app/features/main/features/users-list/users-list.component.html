@@ -1,1 +1,16 @@
-<p>users-list works!</p>
+@if (users$ | async; as users) {
+  <ul class="list">
+    @for (user of users; track user) {
+      <li class="list__item">
+        <p class="list__item-number">{{ user.id }}</p>
+        <div class="list__item-content">
+          <div class="list__item-header">
+            <p>{{ user.username }}</p>
+            <span class="app-caption list__item-caption">{{ user.email }}</span>
+          </div>
+          <p class="app-headline-6">{{ user.name }}</p>
+        </div>
+      </li>
+    }
+  </ul>
+}

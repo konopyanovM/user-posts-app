@@ -1,6 +1,6 @@
 import { User } from '../../app/core/types';
 
-export const USERS: User[] = [
+export const USERS: Partial<User>[] = [
   {
     username: 'John',
     password: 'qwerty123',

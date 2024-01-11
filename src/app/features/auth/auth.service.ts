@@ -54,7 +54,7 @@ export class AuthService {
    * Save user in localstorage
    * @private
    */
-  private _loginHandler(user: User) {
+  private _loginHandler(user: Partial<User>) {
     void this._router.navigate(['/']);
 
     localStorage.setItem(this.USER, JSON.stringify(user));
