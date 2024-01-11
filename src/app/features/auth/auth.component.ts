@@ -1,5 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators, ɵElement } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { getErrorMessage } from '../../core/helpers';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -13,6 +15,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators, ɵElement } fr
 export class AuthComponent {
   // Injections
   private _formBuilder = inject(FormBuilder);
+  private _authService = inject(AuthService);
 
   // Private
   private _formGroup = this._formBuilder.group({
@@ -24,4 +27,16 @@ export class AuthComponent {
   get formGroup(): FormGroup {
     return this._formGroup;
   }
+
+  // Public methods
+
+  public onSubmit() {
+    if (this.formGroup.valid) {
+      const data = this.formGroup.value;
+
+      this._authService.login(data);
+    }
+  }
+
+  protected readonly getErrorMessage = getErrorMessage;
 }

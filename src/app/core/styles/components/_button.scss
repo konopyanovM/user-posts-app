@@ -11,16 +11,21 @@ button {
 
   cursor: pointer;
 
-  &:hover {
+  &:hover:enabled {
     opacity: 0.8;
   }
 
-  &:active {
+  &:active:enabled {
     filter: brightness(0.8);
   }
 
   &:focus {
     opacity: 0.8;
     outline: none;
+  }
+
+  &:disabled {
+    background-color: var(--color-grey-40);
+    cursor: not-allowed;
   }
 }

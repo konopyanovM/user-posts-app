@@ -1,14 +1,14 @@
 <div class="content">
   <h4 class="title">Log in</h4>
-  <form class="form" [formGroup]="formGroup">
+  <form class="form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
     <label for="username">
       <input id="username" formControlName="username" placeholder="Username">
-      <span class="input-error"></span>
+      <span class="input-error">{{ getErrorMessage(formGroup.get('username')) }}</span>
     </label>
     <label for="password">
-      <input id="password" formControlName="password" placeholder="Password">
-      <span class="input-error"></span>
+      <input id="password" type="password" formControlName="password" placeholder="Password">
+      <span class="input-error">{{ getErrorMessage(formGroup.get('password')) }}</span>
     </label>
-    <button>Log in</button>
+    <button [disabled]="formGroup.invalid">Log in</button>
   </form>
 </div>
