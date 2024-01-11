@@ -6,6 +6,7 @@ import { PostsService } from '../../services/posts.service';
 import { Post } from '../../types';
 import { User } from '../../../../core/types';
 import { UserService } from '../../../../core/services/user.service';
+import { LoadingComponent } from '../../../../shared/components/loading/loading.component';
 
 @Component({
   selector: 'app-user-posts-list',
@@ -13,6 +14,7 @@ import { UserService } from '../../../../core/services/user.service';
   imports: [
     AsyncPipe,
     RouterLink,
+    LoadingComponent,
   ],
   templateUrl: './user-posts-list.component.html',
   styleUrl: './user-posts-list.component.scss',
@@ -29,7 +31,7 @@ export class UserPostsListComponent implements OnInit {
 
   ngOnInit() {
     this._userId = this._activatedRoute.snapshot.params['id'];
-    
+
     if (this._userId) {
       this.user$ = this._userService.getUser(this._userId);
       this.userPosts$ = this._postsService.getUserPosts(this._userId);
