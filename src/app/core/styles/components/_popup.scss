@@ -1,0 +1,36 @@
+@use '../utils';
+
+.popup {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 6px;
+  padding: 15px 30px;
+  width: 360px;
+
+  border-radius: 3px 3px 3px 3px;
+
+  background-position: 310px center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+
+  color: var(--color-primary);
+
+  cursor: pointer;
+  pointer-events: auto;
+
+  .toast-title {
+    margin-bottom: 4px;
+  }
+
+  .toast-message {
+    max-width: 270px;
+  }
+
+  .toast-success {
+    background-color: var(--color-success);
+  }
+
+  .toast-error {
+    background-color: var(--color-error);
+  }
+}

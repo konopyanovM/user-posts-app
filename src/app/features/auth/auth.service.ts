@@ -2,6 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { LoginCredentials } from './types';
 import { UserService } from '../../core/services/user.service';
 import { ApiResponse, HttpStatus, User } from '../../core/types';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -9,9 +10,8 @@ import { ApiResponse, HttpStatus, User } from '../../core/types';
 export class AuthService {
   // Injections
   private _userService = inject(UserService);
+  private _router = inject(Router);
   //
-  public isAuthorized: boolean = false;
-
   private USER = 'user';
 
   public login(data: LoginCredentials): ApiResponse {
@@ -40,11 +40,20 @@ export class AuthService {
     };
   }
 
+  public logout() {
+  }
+
+  public isAuthorized(): boolean {
+    return Boolean(localStorage.getItem(this.USER));
+  }
+
   /**
    * Save user in localstorage
    * @private
    */
   private _loginHandler(user: User) {
+    void this._router.navigate(['/']);
+    
     localStorage.setItem(this.USER, JSON.stringify(user));
   }
 }
