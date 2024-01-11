@@ -1,3 +1,5 @@
+@use '../../core/styles/utils';
+
 :host {
   min-height: 100vh;
 }
@@ -13,10 +15,15 @@
 
   border-bottom: 1px solid var(--color-grey-60);
 
+
   &__actions {
     display: flex;
     align-items: center;
     gap: 32px;
+
+    @include utils.breakpoint(sm) {
+      gap: 16px;
+    }
   }
 
   &__info {
