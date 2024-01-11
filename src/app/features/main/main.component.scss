@@ -1,0 +1,28 @@
+:host {
+  min-height: 100vh;
+}
+
+.header {
+  height: 60px;
+
+  padding: 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--color-grey-60);
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__info {
+    font-weight: bold;
+  }
+}
+
+.main {
+}

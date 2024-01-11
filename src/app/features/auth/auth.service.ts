@@ -41,6 +41,9 @@ export class AuthService {
   }
 
   public logout() {
+    void this._router.navigate(['/auth']);
+
+    localStorage.setItem(this.USER, '');
   }
 
   public isAuthorized(): boolean {
@@ -53,7 +56,7 @@ export class AuthService {
    */
   private _loginHandler(user: User) {
     void this._router.navigate(['/']);
-    
+
     localStorage.setItem(this.USER, JSON.stringify(user));
   }
 }

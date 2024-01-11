@@ -1,6 +1,5 @@
 button {
-  min-width: 100%;
-  padding: 8px;
+  padding: 8px 16px;
   border: none;
   border-radius: 4px;
 
@@ -27,5 +26,9 @@ button {
   &:disabled {
     background-color: var(--color-grey-40);
     cursor: not-allowed;
+  }
+
+  &.button--sm {
+    font-size: 16px;
   }
 }

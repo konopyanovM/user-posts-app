@@ -13,5 +13,15 @@ export const routes: Routes = [
     path: '',
     loadComponent: () => import('./features/main/main.component').then(c => c.MainComponent),
     canActivate: [authGuard],
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'users',
+      },
+      {
+        path: 'users',
+        loadComponent: () => import('./features/main/features/users-list/users-list.component').then(c => c.UsersListComponent),
+      }],
   },
 ];

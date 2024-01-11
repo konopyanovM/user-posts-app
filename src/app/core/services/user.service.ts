@@ -6,8 +6,13 @@ import { User } from '../types';
   providedIn: 'root',
 })
 export class UserService {
+  private USER = 'user';
 
   constructor() {
+  }
+
+  public getCurrentUser() {
+    return JSON.parse(localStorage.getItem(this.USER) || '');
   }
 
   public findUser(username: string): false | User {

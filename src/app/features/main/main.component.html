@@ -1,1 +1,12 @@
-<p>main works!</p>
+<header class="header">
+  <a class="logo" routerLink="/">Main</a>
+  <div class="header__actions">
+    <p class="header__info">
+      {{ user.username }}
+    </p>
+    <button class="button--sm" (click)="logout()">Logout</button>
+  </div>
+</header>
+<main class="main">
+  <router-outlet></router-outlet>
+</main>
