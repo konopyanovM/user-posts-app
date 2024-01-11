@@ -1,27 +1,41 @@
-# UserPostsApp
+11.01.2024
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
+# Требования
 
-## Development server
+## Авторизация:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Реализовать простую форму авторизации. На данном этапе не обязательно
+  использовать настоящую аутентификацию. Просто введите фиксированные
+  учетные данные (например, username: "user", password: "password"). (done)
+- После успешной авторизации пользователя перенаправить на страницу с данными. (done)
 
-## Code scaffolding
+## Страница с пользователями:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Загрузить список пользователей с JSONPlaceholder - Users. (done)
+- Отобразить список пользователей на странице. Каждый элемент списка должен
+  содержать как минимум: имя пользователя и его почту. (done)
+- При клике на пользователя перейти на страницу с постами этого пользователя. (done)
 
-## Build
+## Страница с постами:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Загрузить посты выбранного пользователя с JSONPlaceholder - Posts, где :id -
+  идентификатор пользователя. (done)
+- Отобразить список постов на странице. Каждый элемент списка должен содержать
+  заголовок поста и его содержимое. (done)
+- Если у пользователя больше 10 постов, реализовать пагинацию или бесконечный
+  список. (x)
 
-## Running unit tests
+## Дополнительные требования (по желанию):
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Использовать маршрутизацию для переключения между страницами с
+  пользователями и постами. (done)
+- Применить CSS для стилизации интерфейса. Использование препроцессоров (Sass,
+  Less) будет плюсом. (done)
+- Обеспечить адаптивность интерфейса. (done)
+- Добавить визуальные эффекты, такие как анимации при переходах между
+  страницами или при загрузке данных. (x)
 
-## Running end-to-end tests
+# Как запускать
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Установить зависимости `npm install`
+- Запустить проект `ng serve` или `npm run start`
