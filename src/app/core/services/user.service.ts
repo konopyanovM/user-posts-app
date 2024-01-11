@@ -28,4 +28,8 @@ export class UserService {
   public getUsers(): Observable<User[]> {
     return this._http.get<User[]>(environment.api + '/users');
   }
+
+  public getUser(id: number): Observable<User> {
+    return this._http.get<User>(environment.api + '/users/' + id);
+  }
 }

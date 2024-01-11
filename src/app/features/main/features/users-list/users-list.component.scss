@@ -1,0 +1,49 @@
+.list {
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+
+  &__item {
+    height: 80px;
+
+    border: 1px solid var(--color-grey-75);
+
+    transition: transform ease 300ms;
+
+    &:hover {
+      background-color: var(--color-grey-95);
+      border-color: var(--color-accent);
+
+      transform: translateX(8px);
+    }
+
+    &-wrapper {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    &-number {
+      width: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 36px;
+      border-right: 1px solid var(--color-grey-75);
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    &-caption {
+      color: var(--color-grey-40);
+    }
+  }
+}

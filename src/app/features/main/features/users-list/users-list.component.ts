@@ -3,12 +3,14 @@ import { UserService } from '../../../../core/services/user.service';
 import { AsyncPipe } from '@angular/common';
 import { Observable } from 'rxjs';
 import { User } from '../../../../core/types';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-users-list',
   standalone: true,
   imports: [
     AsyncPipe,
+    RouterLink,
   ],
   templateUrl: './users-list.component.html',
   styleUrl: './users-list.component.scss',

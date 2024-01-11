@@ -1,0 +1,32 @@
+.info-header {
+  margin-bottom: 32px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__username {
+    font-weight: bold;
+    color: var(--color-accent);
+  }
+}
+
+.list {
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  &__item {
+    padding: 16px;
+
+    border-radius: 4px;
+
+    box-shadow: 0 0 20px -5px var(--color-grey-75);
+
+    &-header {
+      margin-bottom: 8px;
+    }
+  }
+}
