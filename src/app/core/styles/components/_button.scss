@@ -1,0 +1,26 @@
+button {
+  min-width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+
+  font-size: 20px;
+
+  color: var(--color-primary);
+  background-color: var(--color-accent);
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    filter: brightness(0.8);
+  }
+
+  &:focus {
+    opacity: 0.8;
+    outline: none;
+  }
+}

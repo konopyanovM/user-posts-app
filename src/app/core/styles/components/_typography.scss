@@ -1,0 +1,41 @@
+@use '../utils';
+
+h1, .app-headline-1 {
+  @include utils.headline-1;
+}
+
+h2, .app-headline-2 {
+  @include utils.headline-2;
+}
+
+h3, .app-headline-3 {
+  @include utils.headline-3;
+}
+
+h4, .app-headline-4 {
+  @include utils.headline-4;
+}
+
+h5, .app-headline-5 {
+  @include utils.headline-5;
+}
+
+h6, .app-headline-6 {
+  @include utils.headline-6;
+}
+
+.app-subtitle-1 {
+  @include utils.subtitle-1;
+}
+
+.app-subtitle-2 {
+  @include utils.subtitle-2;
+}
+
+p, .app-body-1 {
+  @include utils.body-1;
+}
+
+.app-caption {
+  @include utils.caption;
+}
