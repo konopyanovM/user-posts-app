@@ -24,6 +24,7 @@ export const routes: Routes = [
       },
       {
         path: 'users',
+        title: 'Users list',
         loadComponent: () => import('./features/main/features/users-list/users-list.component').then(c => c.UsersListComponent),
         data: {
           animation: 'fade',
@@ -31,6 +32,7 @@ export const routes: Routes = [
       },
       {
         path: 'user/:id/posts',
+        title: 'User posts',
         loadComponent: () => import('./features/main/features/user-posts-list/user-posts-list.component').then(c => c.UserPostsListComponent),
         data: {
           animation: 'fade',

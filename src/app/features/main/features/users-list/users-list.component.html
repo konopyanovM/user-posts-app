@@ -1,3 +1,9 @@
+<div class="info-header">
+  <h5>
+    Users list
+  </h5>
+</div>
+
 @if (users$ | async; as users) {
   <ul class="list">
     @for (user of users; track user) {
