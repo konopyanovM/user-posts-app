@@ -8,6 +8,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./features/auth/auth.component').then(c => c.AuthComponent),
     canActivate: [noAuthGuard],
+    data: {
+      animation: 'fade',
+    },
   },
   {
     path: '',
@@ -22,10 +25,16 @@ export const routes: Routes = [
       {
         path: 'users',
         loadComponent: () => import('./features/main/features/users-list/users-list.component').then(c => c.UsersListComponent),
+        data: {
+          animation: 'fade',
+        },
       },
       {
         path: 'user/:id/posts',
         loadComponent: () => import('./features/main/features/user-posts-list/user-posts-list.component').then(c => c.UserPostsListComponent),
+        data: {
+          animation: 'fade',
+        },
       }],
   },
 ];

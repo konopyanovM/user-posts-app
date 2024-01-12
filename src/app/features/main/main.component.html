@@ -9,7 +9,7 @@
 </header>
 <main class="main">
   <div class="app-container">
-    <div class="content">
+    <div class="content" [@routeAnimations]='getRouteAnimationData(childrenOutletContext)'>
       <router-outlet></router-outlet>
     </div>
   </div>
