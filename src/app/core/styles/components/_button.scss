@@ -1,5 +1,5 @@
 button {
-  height: 100%;
+  height: auto;
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
@@ -29,6 +29,14 @@ button {
     cursor: not-allowed;
   }
 
+  // Theme
+  &.button--basic {
+    color: var(--color-secondary);
+    background-color: transparent;
+    border: 1px solid var(--color-grey-60);
+  }
+
+  // Sizes
   &.button--sm {
     font-size: 16px;
   }

@@ -20,6 +20,9 @@ export class AuthComponent {
   private _authService = inject(AuthService);
   private _popupService = inject(PopupService);
 
+  // Public
+  public passwordVisible: boolean = false;
+
   // Private
   private _formGroup = this._formBuilder.group({
     username: ['', [Validators.required]],

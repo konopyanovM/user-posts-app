@@ -6,7 +6,15 @@
       <span class="input-error">{{ getErrorMessage(formGroup.get('username')) }}</span>
     </label>
     <label for="password">
-      <input id="password" type="password" formControlName="password" placeholder="Password">
+      <span class="input-group">
+        <input id="password" [type]="passwordVisible ? 'test' : 'password'" formControlName="password"
+               placeholder="Password">
+        <!-- Toggle password visibility -->
+        <button type="button" class="button--basic material-symbols-outlined"
+                (click)="passwordVisible = !passwordVisible">
+            {{ passwordVisible ? 'visibility_off' : 'visibility' }}
+        </button>
+      </span>
       <span class="input-error">{{ getErrorMessage(formGroup.get('password')) }}</span>
     </label>
     <button [disabled]="formGroup.invalid">Log in</button>
